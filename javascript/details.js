@@ -15,6 +15,7 @@ function humanizeNumber(n) {
 var price01 = 4070;
 var price02 = 2099;
 
+
 function changePrice(price, num, total) {
 	var num = document.getElementById(num).value;
 	document.getElementById(total).innerHTML = humanizeNumber(price*num);
@@ -23,5 +24,6 @@ function changePrice(price, num, total) {
 function computeTotal (num01, num02) {
 	var num01 = document.getElementById(num01).value;
 	var num02 = document.getElementById(num02).value;
-	document.getElementById('total_').innerHTML = humanizeNumber(price01*num01 + price02*num02);
+    var result = price01*num01 + price02*num02;
+	document.getElementById('total_').innerHTML = humanizeNumber(result);
 }

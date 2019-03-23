@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Wedding dress | Address</title>
+		<title>Wedding dress | Carts</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<link rel="stylesheet" type="text/css" href="css/cart.css">
@@ -10,6 +10,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -117,108 +118,108 @@
 								<input type="text" class="form-control mr-3" placeholder="Designer">
 								<div class="input-group-append">
 									<button class="btn btn-warning" type="button">
-									<i class="fa fa-search">Search</i>
+									<i class="fa fa-search"></i>
 									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container">
-				<h2>Your shopping cart</h2>
-				<table class="table table-striped" onchange="computeTotal('number-01', 'number-02')">
-					<thead>
-						<tr>
-							<th style="width: 50%;">Product</th>
-							<th style="width: 8%;">Price</th>
-							<th style="width: 8%;">Quantity</th>
-							<th style="width: 22%; text-align: center;">Subtotal</th>
-							<th style="width: 12%"></th>
-						</tr>
-					</thead>
-					<tbody>
+				
+				<div class="container mt-lg-4">
+					<h2>Your shopping cart</h2>
+					<table class="table table-striped" onchange="computeTotal('number-01', 'number-02')">
+						<thead>
+							<tr>
+								<th style="width: 50%;">Product</th>
+								<th style="width: 8%;">Price</th>
+								<th style="width: 8%;">Quantity</th>
+								<th style="width: 22%; text-align: center;">Subtotal</th>
+								<th style="width: 12%"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="col-sm-3">
+											<img src="img/index/Dress_1.jpeg" width="100%" height="auto">
+										</div>
+										<div class="col-sm-7">
+											<h4>Karah</h4>
+											<p>It's a best-seller wedding dress.</p>
+										</div>
+									</div>
+								</td>
+								<td>$4,070</td>
+								<td><input type="number" class="form-control text-center" value="1" min="0" max="10" id="number-01" onclick="changePrice(4070, 'number-01', 'total-01')"></td>
+								<td class="text-center">$<span id="total-01">4,070</span></td>
+								<td class="active"><button class="btn btn-danger btn-sm">Remove</button></td>
+							</tr>
+							
+							<tr>
+								<td>
+									<div class="row">
+										<div class="col-sm-3">
+											<img src="img/index/Dress_3.jpeg" width="100%" height="auto">
+										</div>
+										<div class="col-sm-7">
+											<h4>Easton</h4>
+											<p>It's a best-seller wedding dress.</p>
+										</div>
+									</div>
+								</td>
+								<td>$2,099</td>
+								<td><input type="number" class="form-control text-center" value="1" min="0" max="10" id="number-02" onclick="changePrice(2099, 'number-02', 'total-02')"></td>
+								<td class="text-center">$<span id="total-02">2,099</span></td>
+								<td class="active"><button class="btn btn-danger btn-sm">Remove</button></td>
+							</tr>
+						</tbody>
+						<tfoot>
 						<tr>
 							<td>
-								<div class="row">
-									<div class="col-sm-3">
-										<img src="img/index/Dress_1.jpeg" width="100%" height="auto">
-									</div>
-									<div class="col-sm-7">
-										<h4>Karah</h4>
-										<p>It's a best-seller wedding dress.</p>
-									</div>
-								</div>
+								<a href="index.html" class="btn btn-warning">&lsaquo; Return Home Page</a>
 							</td>
-							<td>$4,070</td>
-							<td><input type="number" class="form-control text-center" value="1" min="0" max="10" id="number-01" onclick="changePrice(4070, 'number-01', 'total-01')"></td>
-							<td class="text-center">$<span id="total-01">4,070</span></td>
-							<td class="active"><button class="btn btn-danger btn-sm">Remove</button></td>
-						</tr>
-						
-						<tr>
+							<td colspan="2"></td>
+							<td class="text-center"><strong>Total $<span id="total_">6,169</span></strong></td>
 							<td>
-								<div class="row">
-									<div class="col-sm-3">
-										<img src="img/index/Dress_3.jpeg" width="100%" height="auto">
-									</div>
-									<div class="col-sm-7">
-										<h4>Easton</h4>
-										<p>It's a best-seller wedding dress.</p>
-									</div>
-								</div>
+								<a href="#" class="btn btn-info">Payment &rsaquo;</a>
 							</td>
-							<td>$2,099</td>
-							<td><input type="number" class="form-control text-center" value="1" min="0" max="10" id="number-02" onclick="changePrice(2099, 'number-02', 'total-02')"></td>
-							<td class="text-center">$<span id="total-02">2,099</span></td>
-							<td class="active"><button class="btn btn-danger btn-sm">Remove</button></td>
 						</tr>
-					</tbody>
-					<tfoot>
-					<tr>
-						<td>
-							<a href="index.html" class="btn btn-warning">&lsaquo; Return Home Page</a>
-						</td>
-						<td colspan="2"></td>
-						<td class="text-center"><strong>Total $<span id="total_">6,169</span></strong></td>
-						<td>
-							<a href="#" class="btn btn-info">Payment &rsaquo;</a>
-						</td>
-					</tr>
-					</tfoot>
-				</table>
-			</div>
-		</main>
-		<!-- footer -->
-		<footer class="p-3">
-			<div class="row">
-				<div class="col-lg-5">
-					<ul>
-						<h5>In Ho Chi Minh city</h5>
-						<li>Address: 1 Le Loi, Ward Ben Nghe, District 1</li>
-						<li>Phone: 0999999999</li>
-						<li>Fax: (84 24) 3974 3036</li>
-					</ul>
+						</tfoot>
+					</table>
 				</div>
-				<div class="col-lg-5">
-					<ul>
-						<h5>In Ha Noi city</h5>
-						<li>Address: 1 Ly Nam De, Ward Hoang Ma, District Hoang Kiem</li>
-						<li>Phone: 0888888888</li>
-						<li>Fax: (84 24) 3974 3036</li>
-					</ul>
+			</main>
+			<!-- footer -->
+			<footer class="p-3">
+				<div class="row">
+					<div class="col-lg-5">
+						<ul>
+							<h5>In Ho Chi Minh city</h5>
+							<li>Address: 1 Le Loi, Ward Ben Nghe, District 1</li>
+							<li>Phone: 0999999999</li>
+							<li>Fax: (84 24) 3974 3036</li>
+						</ul>
+					</div>
+					<div class="col-lg-5">
+						<ul>
+							<h5>In Ha Noi city</h5>
+							<li>Address: 1 Ly Nam De, Ward Hoang Ma, District Hoang Kiem</li>
+							<li>Phone: 0888888888</li>
+							<li>Fax: (84 24) 3974 3036</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<h5>Contact me</h5>
+						<a href="#"><img src="img/index/fb.png" alt="Facebook" width="32" height="32"></a>
+						<a href="#"><img src="img/index/instagram.png" alt="Instagram" width="32" height="32"></a>
+						<a href="#"><img src="img/index/skype.png" alt="Skype" width="32" height="32"></a>
+					</div>
 				</div>
-				<div class="col-lg-2">
-					<h5>Contact me</h5>
-					<a href="#"><img src="img/index/fb.png" alt="Facebook" width="32" height="32"></a>
-					<a href="#"><img src="img/index/instagram.png" alt="Instagram" width="32" height="32"></a>
-					<a href="#"><img src="img/index/skype.png" alt="Skype" width="32" height="32"></a>
-				</div>
-			</div>
-			<center style="font-size: 15px; opacity: 0.5;">Copyright &copy; G.A.U Co.op
-			</center>
-		</footer>
-	</div>
-	
-</body>
+				<center style="font-size: 15px; opacity: 0.5;">Copyright &copy; G.A.U Co.op
+				</center>
+			</footer>
+		</div>
+		
+	</body>
 </html>
